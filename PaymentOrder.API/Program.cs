@@ -42,4 +42,4 @@ app.MapPost("/payorder", async (PayOrderDto payOrderDto, PayOrderDb db) =>
     return Results.Created($"/payorder/{payOrder.Identifier}", payOrder);
 });
 
-app.Run();
+app.Run("http://*:80");
